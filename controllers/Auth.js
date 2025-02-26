@@ -10,7 +10,7 @@ exports.checkUserExist = async (req, res) => {
 
     if (user) {
       return res.status(400).json({
-        status: 400,
+        status: 404,
         success: true,
         message:
           "User Already Exist With this number. Kindly Try different one",
