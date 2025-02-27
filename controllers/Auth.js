@@ -4,7 +4,7 @@ const bcrypt = require("bcrypt");
 
 exports.checkUserExist = async (req, res) => {
   try {
-    let { mobileNumber } = req.body;
+    let { mobileNumber } = req.query;
 
     let user = await User.findOne({ mobileNumber });
 
